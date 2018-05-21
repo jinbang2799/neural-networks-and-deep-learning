@@ -4,7 +4,7 @@ misleading_gradient
 
 Plots a function which misleads the gradient descent algorithm."""
 
-#### Libraries
+# Libraries
 # Third party libraries
 from matplotlib.ticker import LinearLocator
 # Note that axes3d is not explicitly used in the code, but is needed
@@ -22,8 +22,8 @@ Z = X**2 + 10*Y**2
 
 colortuple = ('w', 'b')
 colors = numpy.empty(X.shape, dtype=str)
-for x in xrange(len(X)):
-    for y in xrange(len(Y)):
+for x in range(len(X)):
+    for y in range(len(Y)):
         colors[x, y] = colortuple[(x + y) % 2]
 
 surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, facecolors=colors,

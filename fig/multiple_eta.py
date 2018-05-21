@@ -14,8 +14,8 @@ import sys
 
 # My library
 sys.path.append('../src/')
-import mnist_loader
-import network2
+from src import mnist_loader
+from src import network2
 
 # Third-party libraries
 import matplotlib.pyplot as plt
@@ -42,7 +42,7 @@ def run_networks():
     training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
     results = []
     for eta in LEARNING_RATES:
-        print "\nTrain a network using eta = "+str(eta)
+        print("\nTrain a network using eta = "+str(eta))
         net = network2.Network([784, 30, 10])
         results.append(
             net.SGD(training_data, NUM_EPOCHS, 10, eta, lmbda=5.0,

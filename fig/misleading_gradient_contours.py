@@ -4,7 +4,7 @@ misleading_gradient_contours
 
 Plots the contours of the function from misleading_gradient.py"""
 
-#### Libraries
+# Libraries
 # Third party libraries
 import matplotlib.pyplot as plt
 import numpy
